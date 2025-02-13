@@ -1,0 +1,31 @@
+# General config
+
+KbdInteractiveAuthentication no
+UsePAM yes
+X11Forwarding yes
+PrintMotd no
+AcceptEnv LANG LC\_\*
+Subsystem sftp /usr/lib/openssh/sftp-server
+Banner /etc/banner
+PermitRootLogin no
+AllowGroups admin
+MaxAuthTries 4
+ClientAliveInterval 60
+ClientAliveCountMax 0
+DisableForwarding yes
+PermitUserRC no
+TCPKeepAlive no
+MaxStartups 1
+PerSourceMaxStartups 1
+AuthenticationMethods publickey
+
+# Kryptosystems & keylengths
+
+HostbasedAcceptedAlgorithms rsa-sha2-512
+HostKeyAlgorithms rsa-sha2-512
+CASignatureAlgorithms rsa-sha2-512
+PubkeyAcceptedAlgorithms rsa-sha2-512
+KexAlgorithms diffie-hellman-group18-sha512
+Ciphers aes256-ctr
+MACs umac-128-etm@openssh.com
+FingerprintHash sha256
